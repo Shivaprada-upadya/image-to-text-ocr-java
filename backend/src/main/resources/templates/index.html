@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Image to Text Extractor</title>
+</head>
+<body>
+    <h2>Upload Image to Extract Text</h2>
+    <form method="post" action="/extract" enctype="multipart/form-data">
+        <input type="file" name="image" required />
+        <button type="submit">Extract</button>
+    </form>
+
+    <h3>Extracted Text:</h3>
+    <pre th:text="${text}">Your text will appear here...</pre>
+</body>
+</html>
